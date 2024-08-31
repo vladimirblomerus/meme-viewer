@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0"
+    />
+    <link
+      rel="stylesheet"
+      href="{{url_for('static', filename='styles.css')}}"
+    />
+    <title>Meme-Viewer</title>
+  </head>
+  <body>
+    <!-- content from the back-end to display in a stylish manner: subreddit, title, url, author, ups, image -->
+    <div class="container">
+      <h1>Meme Viewer</h1>
+      <main class="meme">
+        <h2>r/{{subreddit}}</h2>
+        <h3>{{title}}</h3>
+        <img src="{{image}}" alt="meme" />
+        <p>Post URL: <a href="{{url}}">{{url}}</a></p>
+        <div>
+          <p>Author: {{author}}</p>
+          <p>Ups: {{ups}}</p>
+        </div>
+      </main>
+    </div>
+  </body>
+</html>
