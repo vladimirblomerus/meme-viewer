@@ -23,7 +23,7 @@ This is a simple Flask web application that displays a new meme from the [Meme A
 1. Clone the repository:
 
    ```bash
-   git clone https://github.com/xvlblo22/meme-viewer.git
+   git clone https://github.com/vladimirblomerus/meme-viewer.git
    cd meme-viewer
    ```
 
