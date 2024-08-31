@@ -6,6 +6,8 @@
       name="viewport"
       content="width=device-width, initial-scale=1.0"
     />
+    <!-- Reload every 30 seconds -->
+    <meta http-equiv="refresh" content="30" />
     <link
       rel="stylesheet"
       href="{{url_for('static', filename='styles.css')}}"
@@ -16,6 +18,17 @@
     <!-- content from the back-end to display in a stylish manner: subreddit, title, url, author, ups, image -->
     <div class="container">
       <h1>Meme Viewer</h1>
+      <nav>
+        <form method="POST">
+          <input
+            type="text"
+            name="subreddit"
+            placeholder="Enter subreddit"
+            value="{{requested_subreddit}}"
+          />
+          <button type="submit">Get Meme</button>
+        </form>
+      </nav>
       <main class="meme">
         <h2>r/{{subreddit}}</h2>
         <h3>{{title}}</h3>
